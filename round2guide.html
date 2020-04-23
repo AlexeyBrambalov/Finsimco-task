@@ -136,11 +136,11 @@
                                 <div class="timer"><i class="fas fa-clock"></i> 00:00</div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="round2_msg.html">Financial Sponsors Groups</a>
+                                <a class="nav-link" href="round2_fsg.html">Financial Sponsors Groups</a>
                                 <div class="timer"><i class="fas fa-clock"></i> 00:00</div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">M&A - Acquisition / Divestiture</a>
+                                <a class="nav-link" href="round2_m&a.html">M&A - Acquisition / Divestiture</a>
                                 <div class="timer"><i class="fas fa-clock"></i> 00:00</div>
                             </li>
 
@@ -164,9 +164,21 @@
               
               <!-- Tab panes -->
               <div class="tab-content">
-                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">General task</div>
-                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">Frametastic task</div>
-                <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">Star Hotel task</div>
+                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <p><a href="{{ url_for('static', filename='round2-general.pdf') }}" target="_blank">Open guidance in new tab</a></p>
+                    <br />
+                    <iframe src="{{ url_for('static', filename='round2-general.pdf') }}" width="100%"></iframe>
+                </div>
+                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <p><a href="{{ url_for('static', filename='round2-frametastic.pdf') }}" target="_blank">Open guidance in new tab</a></p>
+                    <br />
+                    <iframe src="{{ url_for('static', filename='round2-frametastic.pdf') }}" width="100%"></iframe>
+                </div>
+                <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                    <p><a href="{{ url_for('static', filename='round2-starhotel.pdf') }}" target="_blank">Open guidance in new tab</a></p>
+                    <br />
+                    <iframe src="{{ url_for('static', filename='round2-starhotel.pdf') }}" width="100%"></iframe>
+                </div>
               </div>
 
         </div>
