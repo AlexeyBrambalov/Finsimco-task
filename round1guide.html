@@ -37,11 +37,11 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a href="round1guide.html" data-toggle="collapse" aria-expanded="false" >
                         <i class="fas fa-copy"></i>
                         Round 1
                     </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <!-- <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
                             <a href="round1guide.html">Guidance</a>
                         </li>
@@ -51,7 +51,7 @@
                         <li>
                             <a href="round1_fsg.html">FSG</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li>
                     <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -125,15 +125,13 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item active mr-3">
-                                <a class="nav-link " href="round1guide.html">Guidance</a>
-                            </li>
-                            <li class="nav-item   mr-3">
-                                <a class="nav-link pb-0" href="round1_dcf.html">Dept Capital Markets</a>
+
+                            <li class="nav-item  mr-3">
+                                <a class="pb-0" href="#">Dept Capital Markets</a>
                                 <div class="timer"><i class="fas fa-clock"></i> 00:00</div>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link pb-0" href="#">Financial Sponsors Groups</a>
+                                <a class="pb-0" href="#">Financial Sponsors Groups</a>
                                 <div class="timer"><i class="fas fa-clock"></i> 00:00</div>
                             </li>
 
@@ -145,32 +143,67 @@
 
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">General</a>
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Guidance</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Frametastic</a>
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Dept Capital Markets</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Star Hotel</a>
+                  <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Financial Sponsors Groups</a>
                 </li>
             </ul>
               
               <!-- Tab panes -->
               <div class="tab-content">
-                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <p><a href="{{ url_for('static', filename='round1-general.pdf') }}" target="_blank">Open guidance in new tab</a></p>
-                    <br />
-                    <iframe src="{{ url_for('static', filename='round1-general.pdf') }}" width="100%"></iframe>
+                <div class="tab-pane active p-3" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <strong>Services:</strong>
+                    <ul>
+                        <li>DCM: Your team’s Debt Capital Markets department will make an offer to underwrite a capital structure of your choice.</li>
+                        <li>FSG: Your Financial Sponsors Group is advising a Private Equity firm that is interested in acquiring the companies available for sale.</li>
+                    </ul>
+                    <strong>Tasks:</strong>
+                    <ul>
+                        <li>Enter your team name in the first tab.</li>
+                        <li>Split up your team for the analysis: 2 people on Frametastic, 2 on Star Hotel.</li>
+                        <li> Follow the guidance in the below information packs and carry out your analysis in the excel sheets provided.</li>
+                    </ul>
+                    <strong>Note:</strong>
+                    <ul>
+                        <li>Time is precious!!</li>
+                        <li>Split up the analysis and aim to reserve sufficient time to discuss key parts within the team. Make joint team decisions.</li>
+                        <li>Building a model involves subjective decision making - use your judgement.</li>
+                        <li>Fill in the blue cells in the excel sheets. Feel free to add additional rows and columns if necessary - it’s your model.</li>
+                    </ul>
+                    <p>You will need the company accounts for Frametastic and      Star Hotel, which you can get here:
+                    </p>
+                    <a href="https://www.finsimco.com/downloads">https://www.finsimco.com/downloads</a>
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                          <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">Frametastic</h5>
+                              <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                              <a href="http://simulation.finsimco.com/static/round1-frametastic.pdf" class="btn btn-primary">Frametastic – Round 1</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="card">
+                            <div class="card-body">
+                              <h5 class="card-title">Star Hotel</h5>
+                              <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                              <a href="http://simulation.finsimco.com/static/round1-starhotel.pdf" class="btn btn-primary">Star Hotel - Round 1</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                 </div>
                 <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <p><a href="{{ url_for('static', filename='round1-frametastic.pdf') }}" target="_blank">Open guidance in new tab</a></p>
-                              <br />
-                              <iframe src="{{ url_for('static', filename='round1-frametastic.pdf') }}" width="100%"></iframe>
+                    {% include 'input-round1-dcm.html' %}
                 </div>
                 <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-                    <p><a href="{{ url_for('static', filename='round1-starhotel.pdf') }}" target="_blank">Open guidance in new tab</a></p>
-                    <br />
-                    <iframe src="{{ url_for('static', filename='round1-starhotel.pdf') }}" width="100%"></iframe>
+                    {% include 'input-round1-fsg.html' %}
                 </div>
               </div>
             

@@ -13,7 +13,7 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    /* color: #999; */
 }
 
 a,
@@ -286,12 +286,14 @@ a.article:hover {
    
 }
 
-.btn:hover{
-    box-shadow: 0 5px 15px rgba(0, 200, 220,0.4);
-}
 
 
 .nav-link.active{
     background-color: var(--main-bg-color) !important;
     border-color:  var(--main-bg-color) !important;
+}
+
+
+.image{
+    background: var(--main-bg-color) !important;
 }
