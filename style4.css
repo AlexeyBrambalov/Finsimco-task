@@ -297,3 +297,8 @@ a.article:hover {
 .image{
     background: var(--main-bg-color) !important;
 }
+
+.card-body{
+    /* background: var(--main-bg-color) !important; */
+
+}
