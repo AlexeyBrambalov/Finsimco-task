@@ -37,11 +37,11 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a href="round1guide.html"  aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-copy"></i>
                         Round 1
                     </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <!-- <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
                             <a href="round1guide.html">Guidance</a>
                         </li>
@@ -51,14 +51,14 @@
                         <li>
                             <a href="round1_fsg.html">FSG</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li>
-                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a href="round2guide.html" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-copy"></i>
                         Round 2
                     </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                    <!-- <ul class="collapse list-unstyled" id="pageSubmenu2">
                         <li>
                             <a href="round2guide.html">Guidance</a>
                         </li>
@@ -71,14 +71,14 @@
                         <li>
                             <a href="round2_m&a.html">M&A</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li>
-                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a href="round3guide.html" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-copy"></i>
                         Round 3
                     </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                    <!-- <ul class="collapse list-unstyled" id="pageSubmenu3">
                         <li>
                             <a href="round3guide.html">Guidance</a>
                         </li>
@@ -91,7 +91,7 @@
                         <li>
                             <a href="round3_dr.html">M&A-DR</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li>
                     <a href="outputs.html">
@@ -128,19 +128,17 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="round2guide.html">Guidance</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="round2_dcf.html">Dept Capital Markets</a>
+                            
+                            <li class="nav-item mr-5">
+                                <a class="pb-0" href="round2_dcf.html">Dept Capital Markets</a>
                                 <div class="timer"><i class="fas fa-clock"></i> 00:00</div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="round2_fsg.html">Financial Sponsors Groups</a>
+                            <li class="nav-item mr-5">
+                                <a class="pb-0" href="round2_fsg.html">Financial Sponsors Groups</a>
                                 <div class="timer"><i class="fas fa-clock"></i> 00:00</div>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="round2_m&a.html">M&A - Acquisition / Divestiture</a>
+                            <li class="nav-item mr-5">
+                                <a class="pb-0" href="round2_m&a.html">M&A - Acquisition / Divestiture</a>
                                 <div class="timer"><i class="fas fa-clock"></i> 00:00</div>
                             </li>
 
@@ -152,32 +150,75 @@
 
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">General</a>
+                  <a class="nav-link tabClass active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Guidance</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Frametastic</a>
+                <li class="nav-item ">
+                  <a class="nav-link tabClass" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Dept Capital Markets</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Star Hotel</a>
+                <li class="nav-item ">
+                  <a class="nav-link tabClass" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Financial Sponsors Groups</a>
                 </li>
+                <li class="nav-item ">
+                    <a class="nav-link tabClass" id="messages-tab2" data-toggle="tab" href="#messages2" role="tab" aria-controls="messages2" aria-selected="false">M&A - Acquisition / Divestiture</a>
+                  </li>
               </ul>
               
               <!-- Tab panes -->
               <div class="tab-content">
-                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <p><a href="{{ url_for('static', filename='round2-general.pdf') }}" target="_blank">Open guidance in new tab</a></p>
-                    <br />
-                    <iframe src="{{ url_for('static', filename='round2-general.pdf') }}" width="100%"></iframe>
+                <div class="tab-pane active p-3" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <strong>Services:</strong>
+                    <ul>
+                        <li>DCM: Your team’s Debt Capital Markets department will make an offer to underwrite a capital structure of your choice.</li>
+                        <li>FSG: Your Financial Sponsors Group is advising a Private Equity firm that is interested in acquiring the companies available for sale.</li>
+                        <li>M&A: Your bank has been asked to advise on an acquisition (Star Hotel) and on
+                            a divestiture (Frametastic).</li>
+                    </ul>
+                    <strong>Tasks:</strong>
+                    <ul>
+                        <li>Update your model with the new financials (see information packs). </li>
+                        <li>Update your model so that the EV calculation is based on your new projections.</li>
+                        <li>Follow the guidance in the information packs.</li>
+                    </ul>
+                    <strong>Note:</strong>
+                    <ul>
+                        <li>Time is precious!!</li>
+                        <li>Maintain the task division (2 people on Frametastic & 2 on Star Hotel). Aim to
+                            reserve sufficient time to discuss key parts within the team. Make joint team
+                            decisions..</li>
+                    </ul>
+                    
+                    <div class="row mt-2">
+                        <div class="col-sm-6">
+                          <div class="card border-primary">
+                            <div class="card-body ">
+                              <h5 class="card-title">Frametastic</h5>
+                              <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                              <a href="http://simulation.finsimco.com/static/round2-frametastic.pdf" class="btn btn-primary">Frametastic – Round 2</a>
+                              <a href="http://simulation.finsimco.com/static/round2-frametastic.pdf" class="btn btn-primary ml-3">Frametastic – xml</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="card border-primary">
+                            <div class="card-body">
+                              <h5 class="card-title">Star Hotel</h5>
+                              <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                              <a href="http://simulation.finsimco.com/static/round2-starhotel.pdf" class="btn btn-primary">Star Hotel - Round 2</a>
+                              <a href="http://simulation.finsimco.com/static/round2-starhotel.pdf" class="btn btn-primary ml-3">Star Hotel - xml</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                 </div>
                 <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <p><a href="{{ url_for('static', filename='round2-frametastic.pdf') }}" target="_blank">Open guidance in new tab</a></p>
-                    <br />
-                    <iframe src="{{ url_for('static', filename='round2-frametastic.pdf') }}" width="100%"></iframe>
+                    {% include 'input-round2-dcm.html' %}
                 </div>
                 <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-                    <p><a href="{{ url_for('static', filename='round2-starhotel.pdf') }}" target="_blank">Open guidance in new tab</a></p>
-                    <br />
-                    <iframe src="{{ url_for('static', filename='round2-starhotel.pdf') }}" width="100%"></iframe>
+                    {% include 'input-round2-fsg.html' %}
+                </div>
+                <div class="tab-pane" id="messages2" role="tabpanel" aria-labelledby="messages-tab2">
+                    {% include 'input-round2-manda.html' %}
                 </div>
               </div>
 

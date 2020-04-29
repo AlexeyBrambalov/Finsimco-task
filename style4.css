@@ -288,10 +288,10 @@ a.article:hover {
 
 
 
-.nav-link.active{
+ .tabClass.active{
     background-color: var(--main-bg-color) !important;
     border-color:  var(--main-bg-color) !important;
-}
+} 
 
 
 .image{
@@ -301,4 +301,8 @@ a.article:hover {
 .card-body{
     /* background: var(--main-bg-color) !important; */
 
+}
+
+.nav-tabs{
+    background: #bdbdbd;
 }

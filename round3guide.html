@@ -37,11 +37,11 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a href="round1guide.html" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-copy"></i>
                         Round 1
                     </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <!-- <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
                             <a href="round1guide.html">Guidance</a>
                         </li>
@@ -51,14 +51,14 @@
                         <li>
                             <a href="round1_fsg.html">FSG</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li>
-                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a href="round2guide.html" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-copy"></i>
                         Round 2
                     </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                    <!-- <ul class="collapse list-unstyled" id="pageSubmenu2">
                         <li>
                             <a href="round2guide.html">Guidance</a>
                         </li>
@@ -71,14 +71,14 @@
                         <li>
                             <a href="round2_m&a.html">M&A</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li>
-                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a href="round3guide.html" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-copy"></i>
                         Round 3
                     </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                    <!-- <ul class="collapse list-unstyled" id="pageSubmenu3">
                         <li>
                             <a href="round3guide.html">Guidance</a>
                         </li>
@@ -91,7 +91,7 @@
                         <li>
                             <a href="round3_dr.html">M&A-DR</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li>
                     <a href="outputs.html">
@@ -128,19 +128,16 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="round3guide.html">Guidance</a>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="round3_fo.html">M&A - Fairness Opinion</a>
+                            <li class="nav-item mr-5">
+                                <a class="pb-0" href="#">M&A - Fairness Opinion</a>
                                 <div class="timer"><i class="fas fa-clock"></i> 00:00</div>
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="round3_ecm.html">M&A - Equity Capital Markets</a>
+                            <li class="nav-item mr-5">
+                                <a class="pb-0" href="#">M&A - Equity Capital Markets</a>
                                 <div class="timer"><i class="fas fa-clock"></i> 00:00</div>
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="round3_dr.html">M&A - Debt Restructuring</a>
+                            <li class="nav-item mr-5">
+                                <a class="pb-0" href="#">M&A - Debt Restructuring</a>
                                 <div class="timer"><i class="fas fa-clock"></i> 00:00</div>
                             </li>
 
@@ -152,40 +149,91 @@
 
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">General</a>
+                  <a class="nav-link tabClass active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">M&A - Fairness Opinion</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link tabClass" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">M&A - Equity Capital Markets</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Frametastic</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Star Hotel</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="bt-tab" data-toggle="tab" href="#bt" role="tab" aria-controls="bt" aria-selected="false">Big Truckers (Negotiation Round)</a>
+                    <a class="nav-link tabClass" id="bt-tab" data-toggle="tab" href="#bt" role="tab" aria-controls="bt" aria-selected="false">M&A - Debt Restructuring</a>
                   </li>
               </ul>
               
               <!-- Tab panes -->
               <div class="tab-content">
-                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <p><a href="{{ url_for('static', filename='round3-general.pdf') }}" target="_blank">Open guidance in new tab</a></p>
-                    <br />
-                    <iframe src="{{ url_for('static', filename='round3-general.pdf') }}" width="100%"></iframe>
+                <div class="tab-pane active p-3" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <strong>Services:</strong>
+                    <ul>
+                        <li>M&A: Your bank has been asked to provide a fairness opinion for Frametastic
+                            & Star Hotel as well as to carry out a debt restructuring negotiation (Big
+                            Trucker).</li>
+                        <li>ECM: Assist with an IPO preparation (Star Hotel)</li>
+                    </ul>
+                    <strong>Tasks:</strong>
+                    <ul>
+                        <li>For Frametasitc and Star Hotel, update your model with the new financials.
+                            Make sure that the EV calculation is based on your new projections.</li>
+                        <li>Task division:
+                            <ul>
+                                <li>2 people on Star Hotel (the same people who covered Star Hotel before).
+                                    One person should look at M&A and the other one at ECM.</li>
+                                <li>1 Person on Frametastic.</li>
+                                <li>1 person on Big Trucker</li>
+                            </ul>
+                        </li>
+                        <li>Follow the guidance in the information packs and aim to reserve sufficient time
+                            to discuss key parts within the team. Make joint team decisions.</li>
+                    </ul>
+                    <strong>Note:</strong>
+                    <ul>
+                        <li>Time is precious!!</li>
+                        <li>The people who cover Frametastic and Star Hotel should support the
+                            restructuring negotiation of Big Trucker, which starts in 15 after Round 3 has
+                            started. Your team has a strong incentive to get a deal done.</li>
+                    </ul>
+                    
+                    <div class="row mt-2">
+                        <div class="col-sm-5 mb-3">
+                          <div class="card border-primary">
+                            <div class="card-body ">
+                              <h5 class="card-title">Frametastic</h5>
+                              <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                              <a href="http://simulation.finsimco.com/static/round3-frametastic.pdf" class="btn btn-primary">Frametastic – Round 2</a>
+                              <a href="http://simulation.finsimco.com/static/round3-frametastic.pdf" class="btn btn-primary ml-3">Frametastic – xml</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-5 mb-3">
+                          <div class="card border-primary">
+                            <div class="card-body">
+                              <h5 class="card-title">Star Hotel</h5>
+                              <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                              <a href="http://simulation.finsimco.com/static/round3-starhotel.pdf" class="btn btn-primary">Star Hotel - Round 2</a>
+                              <a href="http://simulation.finsimco.com/static/round3-starhotel.pdf" class="btn btn-primary ml-3">Star Hotel - xml</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-5 mb-3">
+                            <div class="card border-primary">
+                              <div class="card-body">
+                                <h5 class="card-title">Big Truckers (Negotiation Round)</h5>
+                                <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                                <a href="http://simulation.finsimco.com/static/round3-starhotel.pdf" class="btn btn-primary">Big Truckers - Round 3</a>
+                                <a href="http://simulation.finsimco.com/static/round3-starhotel.pdf" class="btn btn-primary ml-3">Big Truckers - xml</a>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
                 </div>
                 <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <p><a href="{{ url_for('static', filename='round3-frametastic.pdf') }}" target="_blank">Open guidance in new tab</a></p>
-                    <br />
-                    <iframe src="{{ url_for('static', filename='round3-frametastic.pdf') }}" width="100%"></iframe>
+                    {% include 'input-round3-fair.html' %}
                 </div>
                 <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-                    <p><a href="{{ url_for('static', filename='round3-starhotel.pdf') }}" target="_blank">Open guidance in new tab</a></p>
-                    <br />
-                    <iframe src="{{ url_for('static', filename='round3-starhotel.pdf') }}" width="100%"></iframe>
+                    {% include 'input-round3-ecm.html' %}
                 </div>
                 <div class="tab-pane" id="bt" role="tabpanel" aria-labelledby="bt-tab">
-                    <p><a href="{{ url_for('static', filename='round3-bigtruckers.pdf') }}" target="_blank">Open guidance in new tab</a></p>
-                    <br />
-                    <iframe src="{{ url_for('static', filename='round3-bigtruckers.pdf') }}" width="100%"></iframe>
+                    {% include 'output-round3-manda-restr-inpsection.html' %}
+{% include 'input-round3-restruc.html' %}
                 </div>
               </div>
 
