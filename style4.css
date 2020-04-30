@@ -29,7 +29,7 @@ a:focus {
     background: var(--main-bg-color) !important;
     border: none;
     border-radius: 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -285,7 +285,9 @@ a.article:hover {
     /* transition-timing-function: ease-in-out; */
    
 }
-
+.nav-link.tabClass{
+    border: 1px solid rgb(52, 58, 64);;
+}
 
 
  .tabClass.active{
@@ -305,4 +307,5 @@ a.article:hover {
 
 .nav-tabs{
     background: #bdbdbd;
+    
 }
