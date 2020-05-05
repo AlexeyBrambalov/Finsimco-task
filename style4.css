@@ -310,3 +310,9 @@ a.article:hover {
     
 }
 
+
+.tab-pane{
+    background-color: var(--main-bg-color) !important;
+}
+
+

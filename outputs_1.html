@@ -131,13 +131,16 @@
 
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link tabClass active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">DCM- Dept packages</a>
+                  <a class="nav-link tabClass active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">DCM- Debt packages</a>
                 </li>
                 <li class="nav-item ">
                   <a class="nav-link tabClass" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">DCM - Acquisitions & Financing</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link tabClass" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">DCM - Underwriting results</a>
+                  <a class="nav-link tabClass" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">DCM - Underwriting results - Frametastic</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link tabClass" id="message-tab" data-toggle="tab" href="#message" role="tab" aria-controls="message" aria-selected="false">DCM - Underwriting results - Star Hotel</a>
                 </li>
               </ul>
               
@@ -145,6 +148,7 @@
               <div class="tab-content">
                 <div class="tab-pane active pl-3 pr-3" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <!-- {% include 'output-round1-dcm.html' %} -->
+                    <div class="toHide">
 
 
                     
@@ -244,8 +248,12 @@
 
 
 </div>
+
+
+</div>
                 <div class="tab-pane p-3" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <!-- {% include 'output-round1-acquisition-financing.html' %} -->
+                    <div class="toHide">
 
 
                     <table class="table table-striped"><thead class="thead-light">
@@ -315,12 +323,16 @@
                      </table>
 
 
+                    </div>
+
 
 
 
                 </div>
                 <div class="tab-pane p-3" id="messages" role="tabpanel" aria-labelledby="messages-tab">
                     <!-- {% include 'output-round1-dcm-pandl.html' %} -->
+
+                    <div class="toHide">
 
                   
               
@@ -477,6 +489,16 @@
     </tr>
 </table>
 
+
+</div>
+
+</div>
+
+<div class="tab-pane p-3" id="message" role="tabpanel" aria-labelledby="message-tab">
+    <!-- {% include 'output-round1-dcm-pandl2.html' %} -->
+
+    <div class="toHide">
+
 <strong>Star Hotel</strong>
 <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0"><thead >
    <tr>
@@ -628,6 +650,8 @@
       <td>{{ data[2][20][9] }}</td>
   </tr>
 </table>
+
+</div>
 
 
 

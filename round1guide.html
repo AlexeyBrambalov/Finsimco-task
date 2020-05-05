@@ -108,11 +108,11 @@
                         <i class="fas fa-align-justify"></i>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
 
                             <li class="nav-item  mr-5">
-                                <a class="pb-0" href="#">Dept Capital Markets</a>
+                                <a class="pb-0" href="#">Debt Capital Markets</a>
                                 <div class="timer"><i class="fas fa-clock"></i> 00:00</div>
                             </li>
                             <li class="nav-item mr-5">
@@ -121,7 +121,7 @@
                             </li>
 
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </nav>
 
@@ -131,7 +131,7 @@
                   <a class="nav-link tabClass active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Guidance</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link tabClass " id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Dept Capital Markets</a>
+                  <a class="nav-link tabClass " id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Debt Capital Markets</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link tabClass " id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Financial Sponsors Groups</a>
@@ -188,6 +188,10 @@
                 </div>
                 <div class="tab-pane p-3" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <!-- {% include 'input-round1-dcm.html' %} -->
+
+                    <div class="toHide">
+
+                    
                     <strong> Frametastic </strong>  <br />
 <!-- The key is inserted serverside at the render stage.  This means it is critical that the skeleton file passes that key in the request for each iframe. -->
 
@@ -195,7 +199,7 @@
                     <div class="input-group-prepend ">
                     <span class="input-group-text" id="inputGroup-sizing-default">Debt amount:</span>
                     </div>
-                    <input type="number" name='1Frame-debt' id='1Frame-debt'  class="form-control euro_millions" placeholder="In €, not in millions" class="euro_millions" title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'. To determine the debt amount, first do your valuation so that you understand your opinions on the firm. Then review the guidance which indicates what sort of debt amount is normal as a multiplier of EBITDA. Using this as your starting point, judge how aggressive (i.e. high) you want to be with your bid.">
+                    <input type="number" name='1Frame-debt' id='1Frame-debt'  class="form-control euro_millions" placeholder="In €, not in millions"  title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'. To determine the debt amount, first do your valuation so that you understand your opinions on the firm. Then review the guidance which indicates what sort of debt amount is normal as a multiplier of EBITDA. Using this as your starting point, judge how aggressive (i.e. high) you want to be with your bid.">
                     <span class="input-group-text">€</span>
                 </div>
                 <div class="input-group w-50 m-3">
@@ -267,10 +271,16 @@
                     </select>
                 </div>
 
+            </div>
+
 
             </div>
                 <div class="tab-pane p-3" id="messages" role="tabpanel" aria-labelledby="messages-tab">
                     <!-- {% include 'input-round1-fsg.html' %} -->
+
+                    <div class="toHide">
+
+                   
                     <strong> Frametastic </strong>  <br />
                     <!-- The key is inserted serverside at the render stage.  This means it is critical that the skeleton file passes that key in the request for each iframe. -->
 
@@ -320,7 +330,7 @@
                         </select>
                     </div>
 
-
+                </div>
 
                 </div>
             </div>
