@@ -134,7 +134,10 @@
 
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link tabClass active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">M&A - Fairness Opinion</a>
+                    <a class="nav-link tabClass active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Guidelance</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link tabClass" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">M&A - Fairness Opinion</a>
                 </li>
                 <li class="nav-item ">
                   <a class="nav-link tabClass" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">M&A - Equity Capital Markets</a>
@@ -146,7 +149,7 @@
               
               <!-- Tab panes -->
               <div class="tab-content">
-                <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-pane active p-3" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <strong>Services:</strong>
                     <ul>
                         <li>M&A: Your bank has been asked to provide a fairness opinion for Frametastic
@@ -210,15 +213,117 @@
                           </div>
                       </div>
                 </div>
-                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    {% include 'input-round3-fair.html' %}
+                <div class="tab-pane p-3" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <!-- {% include 'input-round3-fair.html' %} -->
+                    <strong> Frametastic </strong>  <br />
+                <!-- The key is inserted serverside at the render stage.  This means it is critical that the skeleton file passes that key in the request for each iframe. -->
+                <div class="input-group w-50 m-3">
+                    <div class="input-group-prepend ">
+                    <span class="input-group-text" id="inputGroup-sizing-default">EV Fair value:</span>
+                    </div>
+                    <input type="number" name='3Frame-ev' id='3Frame-ev' placeholder="In €, not in millions" class="euro_millions form-control" title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'.">
+                    <span class="input-group-text">€</span>
                 </div>
-                <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-                    {% include 'input-round3-ecm.html' %}
+
+
+                    <br />
+                <strong> Star Hotel </strong> <br />
+
+                <div class="input-group w-50 m-3">
+                    <div class="input-group-prepend ">
+                    <span class="input-group-text" id="inputGroup-sizing-default">EV Fair value:</span>
+                    </div>
+                    <input type="number" name='3Star-EV-Fair' id='3Star-EV-Fair' placeholder="In €, not in millions" class="euro_millions form-control" title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'.">
+                    <span class="input-group-text">€</span>
                 </div>
-                <div class="tab-pane" id="bt" role="tabpanel" aria-labelledby="bt-tab">
-                    {% include 'output-round3-manda-restr-inpsection.html' %}
-{% include 'input-round3-restruc.html' %}
+
+
+                </div>
+                <div class="tab-pane p-3" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                    <!-- {% include 'input-round3-ecm.html' %} -->
+                    <div >
+                        <strong> Frametastic </strong>  <br />
+                        <!-- The key is inserted serverside at the render stage.  This means it is critical that the skeleton file passes that key in the request for each iframe. -->
+
+                        <div class="input-group w-50 m-3">
+                            <div class="input-group-prepend ">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Value of Shareholder Loan:</span>
+                            </div>
+                            <input type="number" name='3Frame-shl' id='3Frame-shl'  class="form-control euro_millions" placeholder="In €, not in millions" class="euro_millions" title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'.">
+                            <span class="input-group-text">€</span>
+                        </div>
+
+                        <div class="input-group w-25 m-3">
+                            <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Financial covenant?</label>
+                            </div>
+                            <select class="custom-select" id="inputGroupSelect01" name="3Frame-underwater" title="Underwater simply means that the value of the Assets or the Enterprise Value - when valuing the company as a “going concern” - is less than the instrument itself plus its prior ranking liabilities.">
+                            <option selected>Choose...</option>
+                            <option value="yes">YES</option>
+                            <option value="no">NO</option>
+                            </select>
+                        </div>
+
+
+                    </div>
+
+                        <strong> Star Hotel </strong> <br />
+
+
+                        <div class="input-group w-25 m-3">
+                            <div class="input-group-prepend">
+                            <label class="input-group-text" for="3Star-raise800mln">Financial covenant?</label>
+                            </div>
+                            <select class="custom-select" id="3Star-raise800mln" name="3Star-raise800mln">
+                            <option selected>Choose...</option>
+                            <option value="yes">YES</option>
+                            <option value="no">NO</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group w-50 m-3">
+                            <div class="input-group-prepend ">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Equity Value: </span>
+                            </div>
+                            <input type="number" name='3Star-equityvalue' id='3Star-equityvalue'  class="form-control euro_millions" placeholder="In €, not in millions" class="euro_millions" title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'.">
+                            <span class="input-group-text">€</span>
+                        </div>
+
+                        <div class="input-group w-50 m-3">
+                            <div class="input-group-prepend ">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Share price:</span>
+                            </div>
+                            <input type="number" name='3Star-shareprice' id='3Star-shareprice'  class="form-control euro_millions" placeholder="In €, not in millions" placeholder="In €" title="You should enter this in €. E.g. if you want to put €5, you should type '5'.">
+                            <span class="input-group-text">€</span>
+                        </div>
+
+                </div>
+                <div class="tab-pane p-3" id="bt" role="tabpanel" aria-labelledby="bt-tab">
+
+                <!-- {% include 'input-round3-restruc.html' %} -->
+                <strong> Big Truckers </strong>  <br />
+                <!-- The key is inserted serverside at the render stage.  This means it is critical that the skeleton file passes that key in the request for each iframe. -->
+
+                <div class="input-group w-50 m-3">
+                    <div class="input-group-prepend ">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Haircut you're willing to accept:</span>
+                    </div>
+                    <input type="number"  step='0.05' name='3Big-haircut' id='3Big-haircut' placeholder="For (e.g.) 5%, just type 5"  title="This is the haircut on your original entitlement that you're willing to accept. E.g. if you were originally entitled to €250, and you accept a haircut of 10%, then you will lose €25m and still get €225m">
+                    <span class="input-group-text">%</span>
+                </div>
+
+                <div class="input-group w-50 m-3">
+                    <div class="input-group-prepend">
+                    <label class="input-group-text" for="2Star-accretive">Is this offer Indicative or Firm?</label>
+                    </div>
+                    <select class="custom-select" name="3Big-firm" id="3Big-firm">
+                    <option selected>Choose...</option>
+                    <option value="Indicative">Indicative</option>
+                    <option value="Firm">Firm</option>
+                    </select>
+                </div>
+
+
                 </div>
               </div>
 

@@ -196,14 +196,162 @@
                       </div>
 
                 </div>
-                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    {% include 'input-round2-dcm.html' %}
+                <div class="tab-pane p-3" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <!-- {% include 'input-round2-dcm.html' %} -->
+                    <strong> Frametastic </strong>  <br />
+<!-- The key is inserted serverside at the render stage.  This means it is critical that the skeleton file passes that key in the request for each iframe. -->
+
+                <div class="input-group w-50 m-3">
+                    <div class="input-group-prepend ">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Debt amount:</span>
+                    </div>
+                    <input type="number" name='2Frame-debt' id='2Frame-debt'  class="form-control euro_millions" placeholder="In €, not in millions" class="euro_millions" title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'. To determine the debt amount, first do your valuation so that you understand your opinions on the firm. Then review the guidance which indicates what sort of debt amount is normal as a multiplier of EBITDA. Using this as your starting point, judge how aggressive (i.e. high) you want to be with your bid.">
+                    <span class="input-group-text">€</span>
                 </div>
-                <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-                    {% include 'input-round2-fsg.html' %}
+                <div class="input-group w-50 m-3">
+                    <div class="input-group-prepend ">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Interest rate:</span>
+                    </div>
+                    <input type="number"  step='0.05' name='2Frame-interest-rate' id='2Frame-interest-rate' placeholder="For (e.g.) 5%, just type 5"  title="When deciding the interest rate you're willing to underwrite, review the guidance about what is normal. If you are positive about the company, choosing a lower interest rate may make your bid a bit more competitive">
+                    <span class="input-group-text">%</span>
                 </div>
-                <div class="tab-pane" id="messages2" role="tabpanel" aria-labelledby="messages-tab2">
-                    {% include 'input-round2-manda.html' %}
+
+
+                <strong> Star Hotel </strong> <br />
+
+                <div class="input-group w-50 m-3">
+                    <div class="input-group-prepend ">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Debt amount:</span>
+                    </div>
+                    <input type="number" name='2Star-debt'  id='2Star-debt'  class="form-control euro_millions" placeholder="In €, not in millions" class="euro_millions" title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'. To determine the debt amount, first do your valuation so that you understand your opinions on the firm. Then review the guidance which indicates what sort of debt amount is normal as a multiplier of EBITDA. Using this as your starting point, judge how aggressive (i.e. high) you want to be with your bid.">
+                    <span class="input-group-text">€</span>
+                </div>
+                <div class="input-group w-50 m-3">
+                    <div class="input-group-prepend ">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Interest rate:</span>
+                    </div>
+                    <input type="number"  step='0.05' id='2Star-interest-rate' name='2Star-interest-rate' placeholder="For (e.g.) 5%, just type 5"  title="When deciding the interest rate you're willing to underwrite, review the guidance about what is normal. If you are positive about the company, choosing a lower interest rate may make your bid a bit more competitive">
+                    <span class="input-group-text">%</span>
+                </div>
+
+                </div>
+                <div class="tab-pane p-3" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                    <!-- {% include 'input-round2-fsg.html' %} -->
+                    <strong> Frametastic </strong>  <br />
+
+                    <div class="input-group w-50 m-3">
+                        <div class="input-group-prepend ">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Enterprise Value (or EV):</span>
+                        </div>
+                        <input type="text" name='2Frame-ev' id='2Frame-ev' placeholder="In €, not in millions" class="euro_millions form-control" title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'.">
+                        <span class="input-group-text">€</span>
+                    </div>
+                    
+                    <div class="input-group w-25 m-3">
+                        <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Financing team:</label>
+                        </div>
+                        <select class="custom-select" name="2Frame-debt-package" title="You should now select which other bank should do the financing (DCM) work, assuming your bid is highest. Choose the most attractive bid (highest debt amount, lowest interest rate, etc)">
+                        <option selected>Choose...</option>
+                        <option value="{{ data[3][1][1] }}">{{ data[3][1][1] }}</option>
+                        <option value="{{ data[3][2][1] }}">{{ data[3][2][1] }}</option>
+                        <option value="{{ data[3][3][1] }}">{{ data[3][3][1] }}</option>
+                        <option value="{{ data[3][4][1] }}">{{ data[3][4][1] }}</option>
+                        <option value="{{ data[3][5][1] }}">{{ data[3][5][1] }}</option>
+                        </select>
+                    </div>
+
+                    <strong> Star Hotel </strong> <br />
+
+                    <div class="input-group w-50 m-3">
+                        <div class="input-group-prepend ">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Enterprise Value (or EV):</span>
+                        </div>
+                        <input type="text" name='2Star-ev' id='2Star-ev' placeholder="In €, not in millions" class="euro_millions form-control" title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'.">
+                        <span class="input-group-text">€</span>
+                    </div>
+                    
+                    <div class="input-group w-25 m-3">
+                        <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Financing team:</label>
+                        </div>
+                        <select class="custom-select" name="2Star-debt-package" title="You should now select which other bank should do the financing (DCM) work, assuming your bid is highest. Choose the most attractive bid (highest debt amount, lowest interest rate, etc)">
+                        <option selected>Choose...</option>
+                        <option value="{{ data[3][6][1] }}">{{ data[3][6][1] }}</option>
+                        <option value="{{ data[3][7][1] }}">{{ data[3][7][1] }}</option>
+                        <option value="{{ data[3][8][1] }}">{{ data[3][8][1] }}</option>
+                        <option value="{{ data[3][9][1] }}">{{ data[3][9][1] }}</option>
+                        <option value="{{ data[3][10][1] }}">{{ data[3][10][1] }}</option>
+                        </select>
+                    </div>
+
+
+
+                </div>
+                <div class="tab-pane p-3" id="messages2" role="tabpanel" aria-labelledby="messages-tab2">
+                    <!-- {% include 'input-round2-manda.html' %} -->
+
+                    <strong> Frametastic </strong>  <br />
+
+                    <div class="input-group w-50 m-3">
+                        <div class="input-group-prepend ">
+                        <span class="input-group-text" id="inputGroup-sizing-default">EBITDA:</span>
+                        </div>
+                        <input type="number" name='2Frame-ebitda' id='2Frame-ebitda'  class="form-control euro_millions" placeholder="In €, not in millions" class="euro_millions" title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'.">
+                        <span class="input-group-text">€</span>
+                    </div>
+                    <div class="input-group w-50 m-3">
+                        <div class="input-group-prepend ">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Net Working Capital:</span>
+                        </div>
+                        <input type="number" name='2Frame-nwc' id='2Frame-nwc'  class="form-control euro_millions" placeholder="In €, not in millions" class="euro_millions" title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'.">
+                        <span class="input-group-text">€</span>
+                    </div>
+                    <div class="input-group w-50 m-3">
+                        <div class="input-group-prepend ">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Cash:</span>
+                        </div>
+                        <input type="number" name='2Frame-cash' id='2Frame-cash'  class="form-control euro_millions" placeholder="In €, not in millions" class="euro_millions" title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'.">
+                        <span class="input-group-text">€</span>
+                    </div>
+                    <div class="input-group w-50 m-3">
+                        <div class="input-group-prepend ">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Book equity:</span>
+                        </div>
+                        <input type="number" name='2Frame-bookequity' id='2Frame-bookequity'  class="form-control euro_millions" placeholder="In €, not in millions" class="euro_millions" title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'.">
+                        <span class="input-group-text">€</span>
+                    </div>
+
+
+                    <strong> Star Hotel </strong> <br />
+
+                    <div class="input-group w-50 m-3">
+                        <div class="input-group-prepend ">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Revenue synergies:</span>
+                        </div>
+                        <input type="number" name='2Star-revsyn' id='2Star-revsyn'  class="form-control euro_millions" placeholder="In €, not in millions" class="euro_millions" title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'.">
+                        <span class="input-group-text">€</span>
+                    </div>
+
+                    <div class="input-group w-50 m-3">
+                        <div class="input-group-prepend ">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Cost synergies: </span>
+                        </div>
+                        <input type="number" name='2Star-costsyn' id='2Star-costsyn'  class="form-control euro_millions" placeholder="In €, not in millions" class="euro_millions" title="You should enter this in €, not in millions. E.g. if you want to put €500 million, you should type '500000000', and not '500'.">
+                        <span class="input-group-text">€</span>
+                    </div>
+
+                    <div class="input-group w-25 m-3">
+                        <div class="input-group-prepend">
+                        <label class="input-group-text" for="2Star-accretive">Is this deal accretive?</label>
+                        </div>
+                        <select class="custom-select" id="2Star-accretive" name="2Star-accretive">
+                        <option selected>Choose...</option>
+                        <option value="yes">YES</option>
+                        <option value="no">NO</option>
+                        </select>
+                    </div>
+
                 </div>
               </div>
 

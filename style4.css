@@ -29,7 +29,7 @@ a:focus {
     background: var(--main-bg-color) !important;
     border: none;
     border-radius: 0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -275,7 +275,7 @@ a.article:hover {
 
 .tab-content{
     background-color: var(--main-bg-color);
-    height: 80%
+    height: 85%
 }
 
 .img-fluid:hover{
