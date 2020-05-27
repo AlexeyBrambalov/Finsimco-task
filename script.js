@@ -3,14 +3,14 @@ class Timer {
     timer;
     input;
     sec;
-    callback
+    id;
 
 
 
-
-    constructor(sec, callback){
+    constructor(sec, id){
         this.sec = sec;
-        this.callback = callback
+        this.id = id
+
     }
 
     start(){
@@ -33,11 +33,8 @@ class Timer {
           
             this.clearTimer()
             this.timer = -1
-
         }
-
     }
-
 
     render(){
         const input = this.input
@@ -52,8 +49,22 @@ class Timer {
 
       const text = input > 3600 ? `${hours}:${minutes}:${seconds}` : `${minutes}:${seconds}`
 
-      this.callback(text)
+      const time = document.getElementById(this.id)
 
+      time.textContent = `${this.id} ${text}`
+      if(input > 300 ){
+        time.classList.remove("bg-warning")
+        time.classList.remove("bg-danger")
+        time.classList.add("bg-success")
+      } else if (input <= 300 && input > 60){
+        time.classList.remove("bg-success")
+        time.classList.remove("bg-danger")
+        time.classList.add("bg-warning")
+      } else if (input < 60){
+        time.classList.remove("bg-warning")
+        time.classList.remove("bg-success")
+        time.classList.add("bg-danger")
+      }
     }
 
     setTimer(){
@@ -63,7 +74,6 @@ class Timer {
 
     countDown(){
         this.input--;
-
         this.render();
 
         if(this.input <=0) {
@@ -79,10 +89,7 @@ class Timer {
         this.sec = sec
         this.input = sec
 
-    }
-    
-
-
+    }   
 }
 
 

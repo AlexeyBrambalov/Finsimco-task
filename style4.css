@@ -1,11 +1,14 @@
 :root {
     --main-bg-color: #F0F0F0 ;
+    --element-bg-color: #bdbdbd ; 
+    --light-dark-bg-color: #393836;
+    --dark-bg-color: #292929;
 }
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
     font-family: 'Poppins', sans-serif;
-    background: #bdbdbd;
+    background: var(--element-bg-color);
 }
 
 p {
@@ -63,7 +66,7 @@ span {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #393836;
+    background: var(--light-dark-bg-color);
     color: var(--main-bg-color);
     transition: all 0.3s;
 }
@@ -115,7 +118,7 @@ span {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #292929;
+    background: var(--dark-bg-color);
 }
 
 #sidebar .sidebar-header strong {
@@ -134,7 +137,7 @@ span {
 }
 
 #sidebar ul li a:hover {
-    color: #393836;
+    color: var(--light-dark-bg-color);
     background: var(--main-bg-color);
 }
 
@@ -145,7 +148,7 @@ span {
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: var(--main-bg-color);
-    background: #292929;
+    background: var(--dark-bg-color);
 }
 
 a[data-toggle="collapse"] {
@@ -163,7 +166,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #292929;
+    background: var(--dark-bg-color);
 }
 
 ul.CTAs {
@@ -180,12 +183,12 @@ ul.CTAs a {
 
 a.download {
     background: var(--main-bg-color) !important;
-    color: #393836;
+    color: var(--light-dark-bg-color);
 }
 
 a.article,
 a.article:hover {
-    background: #292929 !important;
+    background: var(--dark-bg-color) !important;
     color: var(--main-bg-color) !important;
 }
 
@@ -306,7 +309,7 @@ a.article:hover {
 }
 
 .nav-tabs{
-    background: #bdbdbd;
+    background: var(--element-bg-color);
     
 }
 
@@ -316,3 +319,31 @@ a.article:hover {
 }
 
 
+td {
+    position: relative;
+  }
+  
+  input[type="text"],
+  textarea {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+  
+    /* for full width without spacing */
+    width: 100%;
+    border: none;
+    /* for full width without spacing */
+  
+    /* for column with internal spacing */
+    /*
+    width: 85%;
+    padding: 0.3rem;
+    margin: 0.2rem 0.5rem;
+    border: 1px solid #ddd;
+    */
+    /* for column with internal spacing */
+  }
+  
