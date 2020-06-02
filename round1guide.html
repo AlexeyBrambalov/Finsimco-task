@@ -59,32 +59,32 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" >
                         <i class="fas fa-copy"></i>
                         Round 2
                     </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                    <!-- <ul class="collapse list-unstyled" id="pageSubmenu2">
                         <li>
                             <a href="round2guide.html">Task 2</a>
                         </li>
                         <li>
                             <a href="outputs_2.html">Outputs 2</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li>
                     <a href="#pageSubmenu3" data-toggle="collapse"  aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-copy"></i>
                         Round 3
                     </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                    <!-- <ul class="collapse list-unstyled" id="pageSubmenu3">
                         <li>
                             <a href="round3guide.html">Task 3</a>
                         </li>
                         <li>
                             <a href="outputs_3.html">Outputs 3</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li>
                     <a href="outputs.html">
@@ -93,8 +93,8 @@
                     </a>
                 </li>
             </ul>
-            <div class="side-timer text-center py-3 bg-success" id="DCF">
-                DCF <span></span>
+            <div class="side-timer text-center py-3 bg-success" id="DCM">
+                DCM <span></span>
             </div>
             <div class="side-timer text-center py-3 bg-success" id="FSG">
                 FSG <span></span>
@@ -136,20 +136,23 @@
 
             <ul class="nav nav-tabs " id="myTab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link tabClass active" id="tab-id" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Guidance</a>
+                  <a class="nav-link tabClass active" id="tab1-id" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Guidance</a>
                 </li>
                 <li class="nav-item ">
-                  <a class="nav-link tabClass " id="tab2-id" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Debt Capital Markets</a>
+                  <a class="nav-link tabClass DCM" id="tab2-id" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Debt Capital Markets</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link tabClass " id="tab3-id" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Financial Sponsors Groups</a>
+                  <a class="nav-link tabClass FSG" id="tab3-id" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Financial Sponsors Groups</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tabClass" id="tab4-id" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false">Table</a>
                 </li>
             </ul>
               
               <!-- Tab panes -->
               <div class="tab-content">
-                <div class="tab-pane active p-3" id="tab1" role="tabpanel" aria-labelledby="tab-id">
-                    <!-- <strong>Services:</strong>
+                <div class="tab-pane active p-3" id="tab1" role="tabpanel" aria-labelledby="tab1-id">
+                    <strong>Services:</strong>
                     <ul>
                         <li>DCM: Your team’s Debt Capital Markets department will make an offer to underwrite a capital structure of your choice.</li>
                         <li>FSG: Your Financial Sponsors Group is advising a Private Equity firm that is interested in acquiring the companies available for sale.</li>
@@ -191,65 +194,12 @@
                             </div>
                           </div>
                         </div>
-                      </div> -->
-
-                      <div class="container mt-5">
-                        <div class="row">
-                          <div class="col-12">
-                            <table class="table table-bordered">
-                              <thead>
-                                <tr>
-                                  <th style="width: 10%;">#</th>
-                                  <th>Text</th>
-                                  <th>Text2</th>
-                                  <th>Text3</th>
-                                  <th style="width: 10%;">Confirm</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td scope="row" class="">Oil</td>
-                                  <td scope="row"><input type="text" placeholder="This is input field"></td>
-                                  <td scope="row"><input type="text" placeholder="This is input field"></td>
-                                  <td scope="row"><input type="text" placeholder="This is input field"></td>
-                                  <td scope="row"><button type="button" class="btn btn-primary">Confirm</button></td>
-                                </tr>
-                                <tr>
-                                    <td scope="row">Loans</td>
-                                    <td scope="row"><input type="text" placeholder="This is input field"></td>
-                                    <td scope="row"><input type="text" placeholder="This is input field"></td>
-                                    <td scope="row"><input type="text" placeholder="This is input field"></td>
-                                    <td scope="row"><button type="button" class="btn btn-primary">Confirm</button></td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">3</td>
-                                    <td scope="row"><input type="text" placeholder="This is input field"></td>
-                                    <td scope="row"><input type="text" placeholder="This is input field"></td>
-                                    <td scope="row"><input type="text" placeholder="This is input field"></td>
-                                    <td scope="row"><button type="button" class="btn btn-primary">Confirm</button></td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">4</td>
-                                    <td scope="row"><input type="text" placeholder="This is input field"></td>
-                                    <td scope="row"><input type="text" placeholder="This is input field"></td>
-                                    <td scope="row"><input type="text" placeholder="This is input field"></td>
-                                    <td scope="row"><button type="button" class="btn btn-primary">Confirm</button></td>
-                                  </tr>
-                                  <tr>
-                                    <td scope="row">5</td>
-                                    <td scope="row"><input type="text" placeholder="This is input field"></td>
-                                    <td scope="row"><input type="text" placeholder="This is input field"></td>
-                                    <td scope="row"><input type="text" placeholder="This is input field"></td>
-                                    <td scope="row"><button type="button" class="btn btn-primary">Confirm</button></td>
-                                  </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
                       </div>
 
+                      
+
                 </div>
-                <div class="tab-pane p-3" id="tab2" role="tabpanel" aria-labelledby="tab2-id">
+                <div class="tab-pane p-3 DCM-tab" id="tab2" role="tabpanel" aria-labelledby="tab2-id">
                     <!-- {% include 'input-round1-dcm.html' %} -->
 
                     <div class="toHide">
@@ -394,6 +344,111 @@
                     </div>
 
                 </div>
+
+                </div>
+
+                <div class="tab-pane p-3" id="tab4" role="tabpanel" aria-labelledby="tab4-id">
+
+                    <div class="container mt-5">
+                        <div class="row">
+                          <div class="col-12">
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th style="width: 20%;" class="text-center">#</th>
+                                  <th style="width: 20%;" class="text-center">Position</th>
+                                  <th class="text-center">Money</th>
+                                  <th class="text-center">Team</th>
+                                  <th style="width: 10%;"></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td scope="row" class="text-center">Equity</td>
+                                  <td scope="row">
+                                    <select class="custom-select table-input">
+                                        <option selected>Choose...</option>
+                                        <option value="long">Long</option>
+                                        <option value="short">Short</option>
+                                    </select>
+                                  </td>
+                                  <td scope="row"><input type="text" placeholder="This is input field" class="table-input euro_millions"></td>
+                                  <td scope="row">
+                                    <select class="custom-select table-input">
+                                        <option selected>Choose...</option>
+                                        <option value="team1">Team1</option>
+                                        <option value="team2">Team2</option>
+                                        <option value="team3">Team3</option>
+                                    </select>
+                                  </td>
+                                  <td scope="row"><button type="button" class="btn btn-primary">Confirm</button></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row" class="text-center">Goverment Bonds</td>
+                                    <td scope="row">
+                                        <select class="custom-select table-input">
+                                            <option selected>Choose...</option>
+                                            <option value="long">Long</option>
+                                            <option value="short">Short</option>
+                                        </select>
+                                      </td>
+                                      <td scope="row"><input type="text" placeholder="This is input field" class="table-input euro_millions"></td>
+                                      <td scope="row">
+                                        <select class="custom-select table-input">
+                                            <option selected>Choose...</option>
+                                            <option value="team1">Team1</option>
+                                            <option value="team2">Team2</option>
+                                            <option value="team3">Team3</option>
+                                        </select>
+                                      </td>
+                                      <td scope="row"><button type="button" class="btn btn-primary">Confirm</button></td>
+                                  </tr>
+                                  <tr>
+                                    <td scope="row" class="text-center">Oil</td>
+                                    <td scope="row">
+                                        <select class="custom-select table-input">
+                                            <option selected>Choose...</option>
+                                            <option value="long">Long</option>
+                                            <option value="short">Short</option>
+                                        </select>
+                                      </td>
+                                      <td scope="row"><input type="text" placeholder="This is input field" class="table-input euro_millions"></td>
+                                      <td scope="row">
+                                        <select class="custom-select table-input">
+                                            <option selected>Choose...</option>
+                                            <option value="team1">Team1</option>
+                                            <option value="team2">Team2</option>
+                                            <option value="team3">Team3</option>
+                                        </select>
+                                      </td>
+                                    <td scope="row"><button type="button" class="btn btn-primary">Confirm</button></td>
+                                  </tr>
+                                  <tr>
+                                    <td scope="row" class="text-center">Corporte bonds</td>
+                                    <td scope="row">
+                                        <select class="custom-select table-input" disabled>
+                                            <option >Choose...</option>
+                                            <option selected value="long">Long</option>
+                                            <option value="short">Short</option>
+                                        </select>
+                                      </td>
+                                      <td scope="row"><input type="text" placeholder="This is input field" class="table-input euro_millions" value="10000000" disabled></td>
+                                      <td scope="row">
+                                        <select class="custom-select table-input " disabled>
+                                            <option >Choose...</option>
+                                            <option selected value="team1">Team1</option>
+                                            <option value="team2">Team2</option>
+                                            <option value="team3">Team3</option>
+                                        </select>
+                                      </td>
+                                    <td scope="row"><button type="button" class="btn btn-danger">Confirmed</button></td>
+                                  </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+
 
                 </div>
             </div>

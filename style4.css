@@ -323,8 +323,7 @@ td {
     position: relative;
   }
   
-  input[type="text"],
-  textarea {
+.table-input{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -334,6 +333,7 @@ td {
   
     /* for full width without spacing */
     width: 100%;
+    height: 100%;
     border: none;
     /* for full width without spacing */
   
@@ -346,4 +346,16 @@ td {
     */
     /* for column with internal spacing */
   }
+
+/* 
+  .select-input{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  } */
   
