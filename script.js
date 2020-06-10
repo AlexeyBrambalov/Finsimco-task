@@ -6,22 +6,40 @@ class Timer {
     id;
 
 
-
-    constructor(sec, id){
+    constructor(sec, id, url){
         this.sec = sec;
-        this.id = id
+        this.id = id;
+        this.url = url;
+                    
+        const timerContainer = document.getElementById("timer-container")
+
+        const a = document.createElement('a')
+
+        a.href = this.url
+
+        const time = document.createElement('div')
+
+        time.appendChild(a)
+
+        timerContainer.appendChild(time)
+
+        time.id=this.id
+
+        time.className = "side-timer text-center py-3 bg-success"
 
         document.getElementById(id).addEventListener('click', () => {
-            document.querySelector('div.active').classList.remove('active')
-
-            document.querySelector('a.active').classList.remove('active')
-
-            document.querySelector(`.${id}`).classList.add('active')
-            document.querySelector(`.${id}-tab`).classList.add('active')
 
             
-            // active.classList.remove('active')
-            // document.querySelector(`.${id}`).classList.add('active')
+                document.querySelector('div.active').classList.remove('active')
+
+                document.querySelector('a.active').classList.remove('active')
+    
+                document.querySelector(`.${id}`).classList.add('active')
+                document.querySelector(`.${id}-tab`).classList.add('active')
+             
+
+
+
 
         })
 
@@ -64,6 +82,7 @@ class Timer {
       const text = input > 3600 ? `${hours}:${minutes}:${seconds}` : `${minutes}:${seconds}`
 
       const time = document.getElementById(this.id)
+
 
       time.textContent = `${this.id} ${text}`
       if(input > 300 ){
@@ -110,24 +129,10 @@ class Timer {
 
 
 
-// const dcfTimer = new Timer(100, function (text){document.getElementById("dcf-timer").textContent = `DCF ${text}`});
+// const dcmTimer = new Timer(100, "DCM", "round1guide.html"
 
-// dcfTimer.start()
-// dcfTimer.pause()
-// dcfTimer.pause()
-// dcfTimer.stop()
+// dcmTimer.start()
+// dcmTimer.pause()
+// dcmTimer.pause()
+// dcmTimer.stop()
 
-
-// const fsgTimer = new Timer( 305, function (text){
-//     const $el = $('#fsg-timer')
-//     if(text == "05:00"){
-//         $el.removeClass('bg-danger').addClass('bg-warning')
-//     }
-//     $el.text(`FSG ${text}`)
-
-
-// });
-// fsgTimer.start()
-// fsgTimer.pause()
-// fsgTimer.pause()
-// fsgTimer.stop()
