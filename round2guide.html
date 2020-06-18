@@ -93,15 +93,16 @@
                     </a>
                 </li>
             </ul>
-            <!-- <div class="side-timer text-center py-3 bg-success">
-                DCF 00:00
+            <div class="side-timer text-center py-3 bg-success">
+                
+                <a href="test.html#tab2">DCF 00:00</a>
             </div>
             <div class="side-timer text-center py-3 bg-danger">
                 FSG 00:00
             </div>
             <div class="side-timer text-center py-3 bg-warning">
                 M&A 00:00
-            </div> -->
+            </div>
             <a href="round1guide.html" id="timer-container"></a>
         </nav>
 
@@ -386,6 +387,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
@@ -393,6 +403,16 @@
                 $('#sidebarCollapse svg').toggleClass('fa-chevron-right');
 
             });
+            $("a").toArray().forEach(function(field){
+                href = $(field).attr("href");
+                if(href.includes("html")) {
+                let i = href.indexOf("html");
+                href = href.slice(0, i+4) + "?key=" + getParameterByName("key") + href.slice(i+4)
+                $(field).attr("href", href);
+            }
+            console.log(getParameterByName("key"));
+            
+    });
         });
     </script>
     <script src="/script.js"></script>
