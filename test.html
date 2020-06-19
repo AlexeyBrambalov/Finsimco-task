@@ -120,24 +120,6 @@
                         <i class="fas fa-align-justify"></i>
                     </button>
 
-                    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
-                            
-                            <li class="nav-item mr-5">
-                                <a class="pb-0" href="round2_dcf.html">Debt Capital Markets</a>
-                                <div class="timer"><i class="fas fa-clock"></i> 00:00</div>
-                            </li>
-                            <li class="nav-item mr-5">
-                                <a class="pb-0" href="round2_fsg.html">Financial Sponsors Groups</a>
-                                <div class="timer"><i class="fas fa-clock"></i> 00:00</div>
-                            </li>
-                            <li class="nav-item mr-5">
-                                <a class="pb-0" href="round2_m&a.html">M&A - Acquisition / Divestiture</a>
-                                <div class="timer"><i class="fas fa-clock"></i> 00:00</div>
-                            </li>
-
-                        </ul>
-                    </div> -->
                 </div>
             </nav>
 
@@ -157,91 +139,89 @@
               <!-- Tab panes -->
               <div class="tab-content">
                 <div class="tab-pane active p-3" id="tab1" role="tabpanel" aria-labelledby="tab1-id">
+
+                    <form class="p-3">
+
+                        <fieldset class="form-group">
+                          <div class="row">
+                            <legend class="col-form-label col-sm-2 pt-0">Report type</legend>
+                            <div class="col-sm-10">
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="flashreport" value="option1" checked>
+                                <label class="form-check-label" for="gridRadios1">
+                                  Flash report
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="fullreport" value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                  Full report
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+
+                        <div class="form-group row">
+                            <label for="colFormLabel" class="col-sm-2 col-form-label">Target price</label>
+                            <div class="col-sm-4">
+                              <input type="text" class="form-control" id="colFormLabel" placeholder="Target price" required>
+                            </div>
+                        </div>
+
+                        <fieldset class="form-group">
+                            <div class="row">
+                              <legend class="col-form-label col-sm-2 pt-0">What to do?</legend>
+                              <div class="col-sm-10">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="gridRadios2" value="buy" checked>
+                                  <label class="form-check-label" >
+                                        Buy
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="gridRadios2" value="sell">
+                                  <label class="form-check-label" >
+                                        Sell
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gridRadios2" value="hold">
+                                    <label class="form-check-label" >
+                                        Hold
+                                    </label>    
+                                  </div>
+                              </div>
+                            </div>
+                          </fieldset>
+
+                        <div class="form-group row" id="upload">
+                            <label for="exampleFormControlFile2" class="col-sm-2 col-form-label">Upload</label>
+                            <div class="col-sm-4">
+                                <input type="file" class="form-control-file" id="exampleFormControlFile2">
+                            </div>
+                        </div>
+
+                        <div class="form-group row" id="textarea">
+                            <label for="exampleFormControlTextarea1" class="col-sm-2 ">Text area</label>
+                            <textarea class="form-control col-sm-6" id="exampleFormControlTextarea1" rows="4"></textarea>
+                          </div>
+
+                        <div class="form-group row">
+                          <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Confirm</button>
+                          </div>
+                        </div>
+                    </form>
+
+                    <form class="p-3">
+                        <div class="form-group row">
+                          <label for="exampleFormControlFile1" class="col-sm-2 ">Industry report</label>
+                          <input type="file" class="form-control-file col-sm-6" id="exampleFormControlFile1">
+                        </div>
+                    </form>
+         
                     
-                    <div class="container mb-5">
-
-                        Full report
-                       
-                        <form>
-                        
-                            <div class="row">
-                                <div class="input-group  col-sm">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputGroup-sizing-default">Target price</span>
-                                    </div>
-                                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" required>
-                                </div>
-
-                                <div class="input-group col-sm">
-                                    <select class="custom-select" id="inputGroupSelect03" required>
-                                        <option selected value="">Choose...</option>
-                                        <option value="Buy">Buy</option>
-                                        <option value="Sell">Sell</option>
-                                        <option value="Hold">Hold</option>
-                                      </select>
-                                </div>
-
-                                <div class="input-group col-sm">
-                                    <div class="input-group-prepend">
-                                      <span class="input-group-text">Upload</span>
-                                    </div>
-                                    <div class="custom-file">
-                                      <input type="file" class="custom-file-input" id="myInput" required>
-                                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                    </div>
-                                  </div>
-
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        
-
-                        </form>
-                       
-
-                      </div>
-
-
-                      <div class="container">
-
-                        Flash report
-                       
-                        <form>
-                       
-                            <div class="row">
-                                <div class="input-group  col-sm">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="inputGroup-sizing-default">Target price</span>
-                                    </div>
-                                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" required>
-                                </div>
-
-                                <div class="input-group col-sm">
-                                    <select class="custom-select" id="inputGroupSelect03" required>
-                                        <option selected value="">Choose...</option>
-                                        <option value="Buy">Buy</option>
-                                        <option value="Sell">Sell</option>
-                                        <option value="Hold">Hold</option>
-                                      </select>
-                                </div>
-
-                                <div class="input-group col-sm">
-                                    <div class="input-group-prepend">
-                                      <span class="input-group-text">Upload</span>
-                                    </div>
-                                    <div class="custom-file">
-                                      <input type="file" class="custom-file-input" id="myInput" required>
-                                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                    </div>
-                                  </div>
-
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        
-
-                        </form>
-                       
-
-                      </div>
 
                 </div>
                 <div class="tab-pane p-3" id="tab2" role="tabpanel" aria-labelledby="tab2-id">
@@ -289,14 +269,13 @@
                 window.location.hash = this.hash;
                 $('html,body').scrollTop(scrollmem);
             });
-            document.querySelector('.custom-file-input').addEventListener('change',function(e){
-            var fileName = document.getElementById("myInput").files[0].name;
-            var nextSibling = e.target.nextElementSibling
-            nextSibling.innerText = fileName
-            })
+
+
+
         });
     </script>
     <script src="/script.js"></script>
+    <script src="/script2.js"></script>
 </body>
 
 </html>
