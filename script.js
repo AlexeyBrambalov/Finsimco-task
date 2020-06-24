@@ -13,26 +13,13 @@ class Timer {
                     
         const timerContainer = document.getElementById("timer-container")
 
-        const a = document.createElement('a')
-
-        a.href = this.url
-
         const time = document.createElement('div')
-
-        time.appendChild(a)
-
 
         timerContainer.appendChild(time)
 
         time.id=this.id
 
-
-
         const hash = this.url.slice(-5)
-
-        console.log(hash);
-        
-
         
 
         time.className = "side-timer text-center py-3 bg-success"
@@ -40,12 +27,10 @@ class Timer {
         document.getElementById(this.id).addEventListener('click', () => {
 
             $(`a[href="${hash}"]`).tab('show');
-
             window.location.href=`${this.url}`;
-
-
+            let scrollmem = $('body').scrollTop();
+            $('html,body').scrollTop(scrollmem);
         })
-
     }
 
     start(){
