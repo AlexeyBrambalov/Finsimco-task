@@ -19,11 +19,11 @@ class Timer {
 
         const time = document.createElement('div')
 
-        timerContainer.appendChild(a)
+        time.appendChild(a)
 
         timerContainer.appendChild(time)
 
-        time.id=this.id
+        a.id=this.id
 
         time.className = "side-timer text-center py-3 bg-success"
 
