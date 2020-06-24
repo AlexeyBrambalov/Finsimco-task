@@ -82,7 +82,7 @@ class Timer {
       const time = document.getElementById(this.id)
 
 
-      a.textContent = `${this.id} ${text}`
+      time.textContent = `${this.id} ${text}`
       if(input > 300 ){
         time.classList.remove("bg-warning")
         time.classList.remove("bg-danger")
