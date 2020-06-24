@@ -13,13 +13,15 @@ class Timer {
                     
         const timerContainer = document.getElementById("timer-container")
 
-        const a = document.createElement('a')
+        // const a = document.createElement('a')
 
-        a.href = this.url
+        // a.href = this.url
 
-        const time = document.createElement('div')
+        const time = document.createElement('a')
 
-        time.appendChild(a)
+        time.href = this.url
+
+        // time.appendChild(a)
 
         timerContainer.appendChild(time)
 
