@@ -28,7 +28,10 @@ class Timer {
 
 
 
+        const hash = this.url.slice(-4)
 
+        console.log(hash);
+        
 
         
 
@@ -36,7 +39,7 @@ class Timer {
 
         document.getElementById(this.id).addEventListener('click', () => {
 
-            $(`a[href="#tab2"]`).tab('show');
+            $(`a[href=${hash}]`).tab('show');
 
             window.location.href=`${this.url}`;
 
