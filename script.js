@@ -26,10 +26,7 @@ class Timer {
 
         time.id=this.id
 
-        
-        $(this.id).click(function () {
-            window.location = `${this.url}`;
-        });
+
 
 
 
@@ -37,9 +34,11 @@ class Timer {
 
         time.className = "side-timer text-center py-3 bg-success"
 
-        document.getElementById("timer-container").addEventListener('click', () => {
+        document.getElementById(this.id).addEventListener('click', () => {
 
             $('a[href="#tab2"]').tab('show');
+
+            window.location = `${this.url}`;
 
             
                 // document.querySelector('div.active').classList.remove('active')
