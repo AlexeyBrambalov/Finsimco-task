@@ -36,7 +36,7 @@ class Timer {
 
         document.getElementById(this.id).addEventListener('click', () => {
 
-            $(`a[href=${this.url.slice(-4)}]`).tab('show');
+            $(`a[href="#tab2"]`).tab('show');
 
             window.location.href=`${this.url}`;
 
