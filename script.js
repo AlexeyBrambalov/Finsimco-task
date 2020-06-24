@@ -19,7 +19,7 @@ class Timer {
 
         time.id=this.id
 
-        const hash = this.url.slice(-5)
+        const hash = this.url.substring(this.url.indexOf("html")+4, this.url.indexOf("html")+9)
         
 
         time.className = "side-timer text-center py-3 bg-success"
