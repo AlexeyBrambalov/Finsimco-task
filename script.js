@@ -38,7 +38,7 @@ class Timer {
 
             $('a[href="#tab2"]').tab('show');
 
-            location.href=this.url;
+            window.location.href=`${this.url}`;
 
 
         })
