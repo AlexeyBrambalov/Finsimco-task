@@ -33,7 +33,7 @@ class Timer {
 
         document.getElementById("timer-container").addEventListener('click', () => {
 
-            document.getElementById("tab1-id").tab('show');
+            $('a[href="#tab2"]').tab('show');
 
             
                 // document.querySelector('div.active').classList.remove('active')
