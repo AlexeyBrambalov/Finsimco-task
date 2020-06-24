@@ -140,9 +140,10 @@
               <div class="tab-content">
                 <div class="tab-pane active p-3" id="tab1" role="tabpanel" aria-labelledby="tab1-id">
 
-                    <form class="p-3">
+                    <b>Company report</b>
 
-                        <fieldset class="form-group">
+                    <form class="p-4 mb-3 mt-3 border border-primary">
+                        <fieldset class="form-group mb-3">
                           <div class="row">
                             <legend class="col-form-label col-sm-2 pt-0">Report type</legend>
                             <div class="col-sm-10">
@@ -162,62 +163,67 @@
                           </div>
                         </fieldset>
 
-                        <div class="form-group row">
+                        <div class="form-group row mb-4">
                             <label for="colFormLabel" class="col-sm-2 col-form-label">Target price</label>
-                            <div class="col-sm-4">
+                            <div class="col-sm-4 p-0">
                               <input type="text" class="form-control" id="colFormLabel" placeholder="Target price" required>
                             </div>
                         </div>
 
-                        <fieldset class="form-group">
+                        <fieldset class="form-group mb-4">
                             <div class="row">
                               <legend class="col-form-label col-sm-2 pt-0">What to do?</legend>
-                              <div class="col-sm-10">
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="gridRadios2" value="buy" checked>
-                                  <label class="form-check-label" >
-                                        Buy
-                                  </label>
-                                </div>
-                                <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="gridRadios2" value="sell">
-                                  <label class="form-check-label" >
-                                        Sell
-                                  </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios2" value="hold">
-                                    <label class="form-check-label" >
-                                        Hold
-                                    </label>    
-                                  </div>
-                              </div>
+                              <select class="custom-select col-sm-4" id="inputGroupSelect01">
+                                <option selected>Choose...</option>
+                                <option value="buy">Buy</option>
+                                <option value="sell">Sell</option>
+                                <option value="hold">Hold</option>
+                              </select>
                             </div>
-                          </fieldset>
+                        </fieldset>
 
                         <div class="form-group row" id="upload">
-                            <label for="exampleFormControlFile2" class="col-sm-2 col-form-label">Upload</label>
-                            <div class="col-sm-4">
-                                <input type="file" class="form-control-file" id="exampleFormControlFile2">
+                            <label class="col-sm-2 col-form-label">Upload report</label>
+                            <div style="position:relative;" class="col-sm-4">
+                                <a class='btn btn-primary' href='javascript:;'>
+                                    Choose File...
+                                    <input type="file" class="input-file" name="file_source" size="40"  onchange='theimage2();' id="file-id2">
+                                </a>
+                                &nbsp;
+                            <span class='label label-info' id="upload-file-info2"></span>
                             </div>
                         </div>
 
                         <div class="form-group row" id="textarea">
-                            <label for="exampleFormControlTextarea1" class="col-sm-2 ">Text area</label>
-                            <textarea class="form-control col-sm-6" id="exampleFormControlTextarea1" rows="4"></textarea>
+                            <label for="exampleFormControlTextarea1" class="col-sm-2 ">Upload report</label>
+                            <textarea class="form-control col-sm-6" id="exampleFormControlTextarea1" rows="3" placeholder="200 chars text rationale "></textarea>
                           </div>
 
-                        <div class="form-group row">
-                          <div class="col-sm-10">
-                            <button type="submit" class="btn btn-primary">Confirm</button>
-                          </div>
+                        <div class="row justify-content-end mr-5">
+                            <button type="submit" class="btn btn-success">Confirm</button>
                         </div>
                     </form>
 
-                    <form class="p-3">
+                    <b>Industrial report (Optional)</b>
+
+                    <form class="p-4 mt-3 border border-danger">
                         <div class="form-group row">
-                          <label for="exampleFormControlFile1" class="col-sm-2 ">Industry report</label>
-                          <input type="file" class="form-control-file col-sm-6" id="exampleFormControlFile1">
+                            <label class="col-sm-2 col-form-label">Upload report</label>
+                            <div style="position:relative;" class="col-sm-4">
+                                <a class='btn btn-primary' href='javascript:;'>
+                                    Choose File...
+                                    <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='theimage();' id="file-id">
+                                </a>
+                                &nbsp;
+                            <span class='label label-info' id="upload-file-info"></span>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="row justify-content-end mr-5">
+                            <button type="submit" class="btn btn-success">Confirm</button>
                         </div>
                     </form>
          
@@ -275,7 +281,10 @@
         });
     </script>
     <script src="/script.js"></script>
+
+    <script src="https://momentjs.com/downloads/moment.js"></script>
     <script src="/script2.js"></script>
+    <script src="/script3.js"></script>
 </body>
 
 </html>

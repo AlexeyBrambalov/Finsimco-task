@@ -39,8 +39,6 @@ class Timer {
              
 
 
-
-
         })
 
     }
@@ -129,7 +127,7 @@ class Timer {
 
 
 
-// const dcmTimer = new Timer(100, "DCM", "round1guide.html"
+// const dcmTimer = new Timer(100, "DCM", "https://finsimco.netlify.app/test.html#tab2")
 
 // dcmTimer.start()
 // dcmTimer.pause()
