@@ -24,7 +24,7 @@ class Timer {
 
         time.className = "side-timer text-center py-3 bg-success"
 
-        document.getElementById(this.id).addEventListener('click', () => {
+        time.addEventListener('click', () => {
 
             $(`a[href="${hash}"]`).tab('show');
             window.location.href=`${this.url}`;
