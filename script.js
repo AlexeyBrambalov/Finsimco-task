@@ -13,15 +13,13 @@ class Timer {
                     
         const timerContainer = document.getElementById("timer-container")
 
-        // const a = document.createElement('a')
+        const a = document.createElement('a')
 
-        // a.href = this.url
+        a.href = this.url
 
-        const time = document.createElement('a')
+        const time = document.createElement('div')
 
-        time.href = this.url
-
-        // time.appendChild(a)
+        time.appendChild(a)
 
         timerContainer.appendChild(time)
 
@@ -84,7 +82,7 @@ class Timer {
       const time = document.getElementById(this.id)
 
 
-      time.textContent = `${this.id} ${text}`
+      a.textContent = `${this.id} ${text}`
       if(input > 300 ){
         time.classList.remove("bg-warning")
         time.classList.remove("bg-danger")
