@@ -33,9 +33,7 @@ class Timer {
                 document.querySelector('div.active').classList.remove('active')
 
                 document.querySelector('a.active').classList.remove('active')
-    
-                document.querySelector(`.${id}`).classList.add('active')
-                document.querySelector(`.${id}-tab`).classList.add('active')
+
              
 
 
