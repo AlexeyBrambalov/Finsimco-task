@@ -25,21 +25,27 @@ class Timer {
 
         a.id=this.id
 
+
+
+        
+
         time.className = "side-timer text-center py-3 bg-success"
 
-        // document.getElementById(id).addEventListener('click', () => {
+        document.getElementById("timer-container").addEventListener('click', () => {
+
+            document.getElementById("tab1-id").tab('show');
 
             
-        //         document.querySelector('div.active').classList.remove('active')
+                // document.querySelector('div.active').classList.remove('active')
 
-        //         document.querySelector('a.active').classList.remove('active')
+                // document.querySelector('a.active').classList.remove('active')
     
-        //         document.querySelector(`.${id}`).classList.add('active')
-        //         document.querySelector(`.${id}-tab`).classList.add('active')
+                // document.querySelector(`.${id}`).classList.add('active')
+                // document.querySelector(`.${id}-tab`).classList.add('active')
              
 
 
-        // })
+        })
 
     }
 
