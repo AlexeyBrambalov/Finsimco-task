@@ -27,17 +27,19 @@ class Timer {
 
         time.className = "side-timer text-center py-3 bg-success"
 
-        document.getElementById(id).addEventListener('click', () => {
+        // document.getElementById(id).addEventListener('click', () => {
 
             
-                document.querySelector('div.active').classList.remove('active')
+        //         document.querySelector('div.active').classList.remove('active')
 
-                document.querySelector('a.active').classList.remove('active')
-
+        //         document.querySelector('a.active').classList.remove('active')
+    
+        //         document.querySelector(`.${id}`).classList.add('active')
+        //         document.querySelector(`.${id}-tab`).classList.add('active')
              
 
 
-        })
+        // })
 
     }
 
