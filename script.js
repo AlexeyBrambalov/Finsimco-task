@@ -28,7 +28,7 @@ class Timer {
 
 
 
-        const hash = this.url.slice(-4)
+        const hash = this.url.slice(-5)
 
         console.log(hash);
         
