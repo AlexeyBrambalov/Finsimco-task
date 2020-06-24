@@ -21,11 +21,15 @@ class Timer {
 
         time.appendChild(a)
 
-        time.onclick=`location.href=${this.url};`
 
         timerContainer.appendChild(time)
 
         time.id=this.id
+
+        
+        $(this.id).click(function () {
+            window.location = `${this.url}`;
+        });
 
 
 
