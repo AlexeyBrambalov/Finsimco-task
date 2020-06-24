@@ -23,7 +23,7 @@ class Timer {
 
         timerContainer.appendChild(time)
 
-        a.id=this.id
+        time.id=this.id
 
         time.className = "side-timer text-center py-3 bg-success"
 
