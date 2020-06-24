@@ -19,7 +19,7 @@ class Timer {
 
         const time = document.createElement('div')
 
-        time.appendChild(a)
+        timerContainer.appendChild(a)
 
         timerContainer.appendChild(time)
 
