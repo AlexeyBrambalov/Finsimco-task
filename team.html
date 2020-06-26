@@ -45,51 +45,28 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-copy"></i>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"  style="color: #bdbdbd;">
+                        <i class="fas fa-check-circle"></i>
                         Round 1
                     </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="round1guide.html">Task 1</a>
-                        </li>
-                        <li>
-                            <a href="outputs_1.html">Outputs 1</a>
-                        </li>
-                    </ul>
+
                 </li>
                 <li>
-                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" >
-                        <i class="fas fa-copy"></i>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" style="color: #bdbdbd;" >
+                        <i class="fa fa-check-circle"></i>
                         Round 2
                     </a>
-                    <!-- <ul class="collapse list-unstyled" id="pageSubmenu2">
-                        <li>
-                            <a href="round2guide.html">Task 2</a>
-                        </li>
-                        <li>
-                            <a href="outputs_2.html">Outputs 2</a>
-                        </li>
-                    </ul> -->
                 </li>
                 <li>
-                    <a href="#pageSubmenu3" data-toggle="collapse"  aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-copy"></i>
+                    <a href="#pageSubmenu3" data-toggle="collapse"  aria-expanded="false" style="color: #bdbdbd;">
+                        <i class="fa fa-check-circle"></i>
                         Round 3
                     </a>
-                    <!-- <ul class="collapse list-unstyled" id="pageSubmenu3">
-                        <li>
-                            <a href="round3guide.html">Task 3</a>
-                        </li>
-                        <li>
-                            <a href="outputs_3.html">Outputs 3</a>
-                        </li>
-                    </ul> -->
                 </li>
                 <li>
-                    <a href="outputs.html">
-                        <i class="fas fa-briefcase"></i>
-                        Outputs
+                    <a href="team.html">
+                        <i class="fas fa-copy"></i>
+                        Round 4
                     </a>
                 </li>
             </ul>
@@ -149,186 +126,299 @@
               <!-- Tab panes -->
               <div class="tab-content">
                 <div class="tab-pane active p-3" id="tab1" role="tabpanel" aria-labelledby="tab1-id">
+
+                    <form>
                    
-                    <div class="container mt-2 col-6">
+                    <div class="container mt-2 col-7">
                         <div class="row">
                           <div class="col-12">
                             <table class="table table-bordered table-sm table-striped ">
                               <thead>
                                 <tr>
-                                  <th style="width: 40%;" class="text-center" ></th>
-                                  <th style="width: 30%;" class="text-center" >Lender</th>
-                                  <th style="width: 30%;" class="text-center" >Issuer Advisor</th>
+                                  <th style="width: 50%;" class="text-center" ></th>
+                                  <th style="width: 25%;" class="text-center" >Lender</th>
+                                  <th style="width: 25%;" class="text-center" >Issuer Advisor</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr >
-                                  <td scope="row" class="text-center">Issuer</td>
-                                  <td scope="row " >
-                                    <input type="text" class="table-input">
-                                  </td>
-                                  <td scope="row ">
-                                    <input type="text" class="table-input">
-                                  </td>
+                                  <td scope="row" class="text-center">Lender (Team name)</td>
+                                  <td scope="row" id="ts1-lendername"></td>
+                                  <td scope="row"></td>
                                 </tr>
+                                <tr >
+                                    <td scope="row" class="text-center">Issuer Advisor (Team name)</td>
+                                    <td scope="row" id="ts1-issuername">                                      
+                                    </td>
+                                    <td scope="row ">
+                                    </td>
+                                </tr>
+                                  <tr >
+                                    <td scope="row" class="text-center">Issuer</td>
+                                    <td scope="row " >
+                                      <input type="text" class="table-input" id="ts1-lender1">
+                                    </td>
+                                    <td scope="row ">
+                                        <select class="custom-select table-input" id="ts1-issuer1">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </td>
+                                  </tr>
                                 <tr >
                                     <td scope="row" class="text-center">Loan amount</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                      <input type="number" class="table-input" id="ts1-lender2">
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer2">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Interest rate</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                      <input type="number" step='0.05' class="table-input" id="ts1-lender3">
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer3">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Maturity</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                      <input type="number" class="table-input" id="ts1-lender4">
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer4">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Amortization</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                      <input type="text" class="table-input" id="ts1-lender5">
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer5">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Prepayment option</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                      <input type="text" class="table-input" id="ts1-lender6">
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer6">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Guarantees</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                      <input type="text" class="table-input" id="ts1-lender7">
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer7">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Seniority</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-lender8">
+                                            <option selected>Choose...</option>
+                                            <option value="Senior-Secured">Senior Secured</option>
+                                            <option value="Senior-Unsecured">Senior Unsecured</option>
+                                            <option value="Unsecured">Unsecured</option>
+                                        </select>
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer8">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Collateral</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                      <input type="text" class="table-input" id="ts1-lender9">
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer9">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Borrower reps and warranties</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                      <input type="text" class="table-input" id="ts1-lender10">
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer10">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Conditions precedent to initial funding</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                      <input type="text" class="table-input" id="ts1-lender11">
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer11">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Affirmative covenants</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                      <input type="text" class="table-input" id="ts1-lender12">
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer12">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Negative covenants</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                      <input type="text" class="table-input" id="ts1-lender13">
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer13">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Financial covenants</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                      <input type="text" class="table-input" id="ts1-lender14">
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer14">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Events of default</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                      <input type="text" class="table-input" id="ts1-lender15">
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer15">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Default rate</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                      <input type="number" step='0.05' class="table-input" id="ts1-lender16">
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer16">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Administrative agent</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-lender17">
+                                            <option selected>Choose...</option>
+                                            <option value="Lender">Lender</option>
+                                            <option value="3rd-party">3rd party</option>
+                                        </select>
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer17">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
                                   <tr >
                                     <td scope="row" class="text-center">Fees and expenses</td>
                                     <td scope="row " >
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-lender18">
+                                            <option selected>Choose...</option>
+                                            <option value="Lender">Lender</option>
+                                            <option value="Issuer">Issuer</option>
+                                            <option value="Shared">Shared</option>
+                                        </select>
                                     </td>
                                     <td scope="row ">
-                                      <input type="text" class="table-input">
+                                        <select class="custom-select table-input" id="ts1-issuer18">
+                                            <option selected>Choose...</option>
+                                            <option value="TBD">TBD</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
                                     </td>
                                   </tr>
-
-
-
-
-
 
 
                               </tbody>
@@ -336,6 +426,12 @@
                           </div>
                         </div>
                       </div>
+
+                    <div class="row justify-content-end mr-5">
+                        <button type="submit" class="btn btn-success">Confirm</button>
+                    </div>
+
+                    </form>
 
                 </div>
                 <div class="tab-pane p-3 DCM-tab" id="tab2" role="tabpanel" aria-labelledby="tab2-id">
