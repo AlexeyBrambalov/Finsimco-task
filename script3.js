@@ -1,18 +1,20 @@
 class Calendar {
 
+    
+
     timer;
 
-    constructor(){
-       
-        let m = moment(new Date(2020, 6, 1));
+    constructor(dateStr, addSec){
+
+        this.addSec = addSec
+        let addDays =  Math.round(this.addSec/10)
+        
+        this.m = moment(dateStr)
+        this.addSec && this.m.add(addDays, "days")
         const timerContainer = document.getElementById("timer-container")
-        const time = document.createElement('div')
-        time.id="calendar"
 
-        timerContainer.appendChild(time)
-
-        time.className = "side-timer text-center py-3 bg-success"
-        time.textContent = m.format("DD-MM-YYYY").toString();
+        timerContainer.className = "side-timer text-center py-3 bg-success"
+        timerContainer.textContent = this.m.format("DD MMM YYYY");
 
     }
 
@@ -37,17 +39,18 @@ class Calendar {
     }
 
     render(){
-        const time = document.getElementById("calendar")
-        time.textContent = m.format("DD-MM-YYYY").toString();
+        const timerContainer = document.getElementById("timer-container")
+        timerContainer.textContent = this.m.format("DD MMM YYYY");
     }
 
     setTimer(){
         this.clearTimer()
+
         this.timer = setInterval(this.countDown.bind(this), 1000);
     }
 
     countDown(){
-        m.add("days",1)
+        this.m.add(1, "days")
         this.render();
 
     }

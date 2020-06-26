@@ -12,20 +12,15 @@ class Timer {
         this.url = url;
                     
         const timerContainer = document.getElementById("timer-container")
-
         const time = document.createElement('div')
-
         timerContainer.appendChild(time)
-
         time.id=this.id
 
         const hash = this.url.substring(this.url.indexOf("html")+4, this.url.indexOf("html")+9)
         
-
         time.className = "side-timer text-center py-3 bg-success"
 
         time.addEventListener('click', () => {
-
             $(`a[href="${hash}"]`).tab('show');
             window.location.href=`${this.url}`;
             let scrollmem = $('body').scrollTop();
