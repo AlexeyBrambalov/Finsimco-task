@@ -121,7 +121,7 @@ span {
 }
 
 #sidebar .sidebar-header {
-    padding: 20px;
+    padding: 0px;
     background: var(--dark-bg-color);
 }
 
@@ -269,7 +269,7 @@ a.article:hover {
 
 .image{
     position: relative;
-    height: 120px;
+    height: 110px;
     overflow: hidden;
     
 }
