@@ -51,6 +51,18 @@ class Timer {
         }
     }
 
+
+    pause(){
+        this.clearTimer()
+        this.timer = -1
+    }
+
+    unPause(){
+        this.setTimer()
+    }
+
+
+
     render(){
         const input = this.input
 

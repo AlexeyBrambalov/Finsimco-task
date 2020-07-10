@@ -38,18 +38,17 @@
             </div>
 
             <ul class="list-unstyled components">
-                <li class="active">
+                <!-- <li class="active">
                     <a href="index.html">
                         <i class="fas fa-home"></i>
                         Home
                     </a>
-                </li>
+                </li> -->
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"  style="color: #bdbdbd;">
+                    <a  data-toggle="collapse" aria-expanded="false">
                         <i class="fas fa-check-circle"></i>
                         Round 1
                     </a>
-
                 </li>
                 <li>
                     <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" style="color: #bdbdbd;" >
@@ -82,7 +81,7 @@
         <!-- Page Content  -->
         <div id="content">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-expand">
                 <div class="container-fluid">
 
                     <button type="button" id="sidebarCollapse" class="btn btn-dark">
@@ -90,11 +89,8 @@
                         <i class="fas fa-chevron-left"></i>
                        
                     </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
                         <marquee direction="" onmouseover="this.stop();" onmouseout="this.start();" class="newsfeed">
                             <span class="text-container">
                             Running text shpuld be here and newsfeed is going to stop when mouseover and could be the link
@@ -112,32 +108,31 @@
                 <li class="nav-item">
                   <a class="nav-link tabClass active" id="tab1-id" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Guidance</a>
                 </li>
-                <li class="nav-item ">
-                  <a class="nav-link tabClass DCM" id="tab2-id" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Debt Capital Markets</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link tabClass FSG" id="tab3-id" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Financial Sponsors Groups</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link tabClass" id="tab4-id" data-toggle="tab" href="#tab4" role="tab" aria-controls="tab4" aria-selected="false">Table</a>
-                </li>
             </ul>
               
               <!-- Tab panes -->
               <div class="tab-content">
                 <div class="tab-pane active p-3" id="tab1" role="tabpanel" aria-labelledby="tab1-id">
 
+                  <select class="custom-select col-3" id="ts1-issuer17">
+                    <option selected>TBD</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                  </select>
+
+
+
                     <form>
                    
-                    <div class="container mt-2 col-7">
+                    <div class="container mt-2 col-12">
                         <div class="row">
                           <div class="col-12">
                             <table class="table table-bordered table-sm table-striped ">
-                              <thead>
+                              <thead >
                                 <tr>
-                                  <th style="width: 50%;" class="text-center" ></th>
-                                  <th style="width: 25%;" class="text-center" >Lender</th>
-                                  <th style="width: 25%;" class="text-center" >Issuer Advisor</th>
+                                  <th style="width: 20%;" class="text-center ts-first-row" ></th>
+                                  <th style="width: 60%;" class="text-center ts-second-row" >Lender</th>
+                                  <!-- <th style="width: 20%;" class="text-center ts-third-row" >Issuer Advisor</th> -->
                                 </tr>
                               </thead>
                               <tbody>
@@ -195,7 +190,7 @@
                                         </select>
                                     </td>
                                   </tr>
-                                  <tr >
+                                  <tr>
                                     <td scope="row" class="text-center">Maturity</td>
                                     <td scope="row " >
                                       <input type="number" class="table-input" id="ts1-lender4">
@@ -209,10 +204,10 @@
                                         </select>
                                     </td>
                                   </tr>
-                                  <tr >
+                                  <tr style="height: 8em;">
                                     <td scope="row" class="text-center">Amortization</td>
-                                    <td scope="row " >
-                                      <input type="text" class="table-input" id="ts1-lender5">
+                                    <td scope="row">
+                                        <textarea id="ts1-lender5" cols="45" rows="10" class="table-input"></textarea>
                                     </td>
                                     <td scope="row ">
                                         <select class="custom-select table-input" id="ts1-issuer5">
@@ -434,21 +429,7 @@
                     </form>
 
                 </div>
-                <div class="tab-pane p-3 DCM-tab" id="tab2" role="tabpanel" aria-labelledby="tab2-id">
-                    
 
-                </div>
-                <div class="tab-pane p-3" id="tab3" role="tabpanel" aria-labelledby="tab3-id">
-                   
-
-                </div>
-
-                <div class="tab-pane p-3" id="tab4" role="tabpanel" aria-labelledby="tab4-id">
-
-                    
-
-
-                </div>
             </div>
             
 

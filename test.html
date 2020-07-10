@@ -23,6 +23,7 @@
     <script src="{{ url_for('static', filename='scripts/form-intercept.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts/sockets.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts/page-init.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"></script>
 
 
 </head>
@@ -34,7 +35,8 @@
         <nav id="sidebar">
             <div class="sidebar-header image">
                 <a href="index.html"><img class="img-fluid " src="svg2.svg" alt="Finsimco"></a>
-                <a href="index.html"><strong>F</strong></a>
+                <a href="index.html"><img class="img-fluid" style="margin-top: 120px; margin-left: 70px; width: 40px;" src="/rbc.png" alt="rbc"></a>
+
             </div>
 
             <ul class="list-unstyled components">
@@ -149,13 +151,13 @@
                             <div class="col-sm-10">
                               <div class="form-check">
                                 <input class="form-check-input" type="radio" name="gridRadios" id="flashreport" value="option1" checked>
-                                <label class="form-check-label" for="gridRadios1">
+                                <label class="form-check-label" >
                                   Flash report
                                 </label>
                               </div>
                               <div class="form-check">
                                 <input class="form-check-input" type="radio" name="gridRadios" id="fullreport" value="option2">
-                                <label class="form-check-label" for="gridRadios2">
+                                <label class="form-check-label" >
                                   Full report
                                 </label>
                               </div>
@@ -232,15 +234,30 @@
                 </div>
                 <div class="tab-pane p-3" id="tab2" role="tabpanel" aria-labelledby="tab2-id">
                     <!-- {% include 'input-round2-dcm.html' %} -->
-2222
+
+                    <div class="card m-1" style="width: 40%">
+                        <div class="card-body">
+                          <h5 class="card-title">Headline</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                          <p class="card-text">After their strategic pivot towards Eco-friendliness, all of Frametastic&#39;s door and widow frames have
+                            received an A/A+/A++ energy rating meeting the highest standard for eco-friendliness. Cost
+                            projections should be revised, given that these frames cost 4% more than previously to produce.
+                            Labour cost is not affected.</p>
+                          <a href="#" class="card-link">Card link</a>
+                        </div>
+                    </div>
+                      
+
                 
 
                 </div>
                 <div class="tab-pane p-3" id="tab4" role="tabpanel" aria-labelledby="tab4-id">
-                    <!-- {% include 'input-round2-manda.html' %} -->
+                        <canvas id="barChart" class="col-8"></canvas>
 
-                   333
-                    
+                        <canvas id="barChart2" class="col-8"></canvas>
+
+                        <canvas id="graph" class="col-8"></canvas>
+
 
                 </div>
 
@@ -285,6 +302,7 @@
     <script src="https://momentjs.com/downloads/moment.js"></script>
     <script src="/script2.js"></script>
     <script src="/script3.js"></script>
+    <script src="chart1.js"></script>
 </body>
 
 </html>
